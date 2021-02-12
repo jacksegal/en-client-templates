@@ -18,6 +18,8 @@ C6.Share = {
                 return false;
             }
         });
+
+        this.updateLinksFromSelector(['facebook', 'twitter', 'whatsapp', 'email']);
     },
     getLink: function(medium,msg) {
         return this.media[medium].url + encodeURIComponent(msg);

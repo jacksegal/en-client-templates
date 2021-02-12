@@ -24,19 +24,12 @@ C6.En = {
             var labelText = label.text();
             input.attr('placeholder', labelText);
         });
-        
-        /*$('.en__field__input--textarea').each(function(){
-            var input = $(this).find('input');
-            var label = $(this).find('label');
-            var labelText = label.text();
-            input.attr('placeholder', labelText);
-        });*/
+    },
+    updateNextPageUrl: function() {
+        $(".next-button").attr('href', this.getNextPageUrl());
     },
     getNextPageUrl: function() {
         return $('form.en__component--page').attr('action');
-    },
-    bootstrapButtons: function() {
-        $('.en__submit button').addClass('btn btn-en-submit btn-lg btn-block');
     },
     readMoreToggle: function() {
         /* More Info */ 
@@ -59,19 +52,18 @@ C6.En = {
         } 
     },
     optInPersuasion: function(optInField, optInValue, persuasion) {
-        /* Email Opt-in Persuasion */
         $(optInField).change(function(e) {
             if(e.target.value === optInValue) {
                 $(persuasion).show();
 
-                console.group("%cEmail Opt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
+                console.group("%Opt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
                 console.log("Value:\t", e.target.value);
                 console.log("Show:\t", persuasion);
                 console.groupEnd();
             } else {
                 $(persuasion).hide();
 
-                console.group("%cEmail Opt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
+                console.group("%Opt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
                 console.log("Value:\t", e.target.value);
                 console.log("Hide:\t", persuasion);
                 console.groupEnd();
@@ -81,6 +73,7 @@ C6.En = {
     },
     addLogicalCssClasses: function() {
         $('img.d-inline').parent('.en__component--imageblock').addClass('d-inline');
+        $('.en__submit button').addClass('btn btn-en-submit btn-lg btn-block');
     },
     createErrorContainer: function() {
         if ($('.en__errorHeader').length && $('.en-errors').length) {

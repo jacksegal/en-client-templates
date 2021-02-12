@@ -128,12 +128,14 @@ input[type=checkbox], input[type=radio] {
 
 /* Server validation error */
 .en__errorHeader {
-    background-color: red;
+    color: #721c24;
+    background-color: #f8d7da;
     padding: 10px;
 }
 /* Server validation error */
 .en__errorList {
-    background-color: red;
+    color: #721c24;
+    background-color: #f8d7da;
     padding: 10px;
     margin-bottom: 20px !important;
 }
