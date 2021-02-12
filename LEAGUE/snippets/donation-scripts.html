@@ -1,0 +1,53 @@
+	<script>
+        window.enOnSubmit = function(){
+        	if($('#en__field_transaction_ccnumber').length ){
+                $('#en__field_transaction_ccnumber').val(function(index, value){
+                    return value.replace(/\s+/g, '');
+                });
+        	}
+        	if($('input[name="transaction.recurrpay"]').length) {
+        	    sessionStorage.setItem('recurrpay', $('input[name="transaction.recurrpay"]:checked').val());
+        	   // C6.Cookie.set('recurrpay', $('input[name="transaction.recurrpay"]:checked').val());
+        	}   	
+        	return true;
+        }	    
+	</script>
+	
+	
+	<script>
+	if($('#en__field_transaction_ccnumber').length ){
+        var cleave = new Cleave('#en__field_transaction_ccnumber', {
+            creditCard: true,
+            onCreditCardTypeChanged: function (type) {
+                console.log("%cCard type:\t "+type, "color: #241C15; background-color: #FF3EBF; padding: 4px; font-weight: 400;");
+            }
+        });	    	    
+	}
+	
+	if($('#en__field_transaction_othamt1').length ){
+        var cleave = new Cleave('#en__field_transaction_othamt1', {
+            delimiter: '-',
+            blocks: [2, 2, 2],
+            numericOnly: true
+        });	    
+	}
+	
+	if($('#en__field_transaction_othamt2').length ){
+        var cleave = new Cleave('#en__field_transaction_othamt2', {
+            delimiter: ' ',
+            blocks: [4, 4],
+            numericOnly: true
+        });	    
+	}
+	
+	if($('#en__field_transaction_ccvv').length) {
+	    $('#en__field_transaction_ccvv').attr('maxlength', 4);
+	}
+
+	</script>
+	
+	<script>
+        $('input[name="transaction.donationAmt.other"]').on("input", function(){
+        	$('input[name="transaction.donationAmt"][value="Other"]').prop("checked", true).change();
+        });	    
+	</script>

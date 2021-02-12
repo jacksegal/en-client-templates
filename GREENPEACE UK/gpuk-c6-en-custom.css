@@ -1,0 +1,19 @@
+.form-control {
+    border-radius: 0 !important;
+}
+
+.border-light {
+    border-color: #dbdcdc !important;
+}
+
+.privacy-policy-text {
+    color: #CCCCCC !important;
+    font-size: 60%;
+    font-weight: 400;
+}
+
+.footer {
+    background-color: #58595b;
+    /*color: #a3a3a3;*/
+    padding: 20px;
+}

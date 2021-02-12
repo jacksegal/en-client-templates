@@ -1,0 +1,157 @@
+/* Defaults */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Defaults */
+form.en__component--page, #en__pagebuilder .en__container {
+    width: 100%;
+}
+
+/* Defaults */
+img {
+    max-width: 100%;
+}
+
+/* Defaults */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+/* Defaults */
+a {
+    color: inherit;
+}
+
+/* Forms */
+.en__field {
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0 !important;
+}
+
+/* Forms */
+.form-check-label {
+    margin-left: 5px;
+}
+
+/* Forms */
+input[type=checkbox], input[type=radio] {
+    transform: scale(2);
+    margin-left: 5px;
+}
+
+/* Forms */
+.en__field--checkbox .en__field__label, .en__field--radio .en__field__label {
+    vertical-align: middle !important;
+}
+
+/* Forms */
+.en__field--checkbox .en__field__label, .en__field--radio .en__field__label {
+    margin-bottom: 0 !important;
+}
+
+/* Forms */
+.en__field__input--radio, .en__field__input--checkbox {
+    margin-right: 8px;
+}
+
+/* Forms */
+.en__field__element--radio .en__field__label--item, .en__field__element--checkbox .en__field__label--item {
+    font-size: 88%;
+}
+
+/* Forms */
+.en__field {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Forms */
+.en__field__label, .en__field__element {
+    order: 1;
+}
+
+/* Forms */
+.en__field__error {
+    order: 2;
+}
+
+/* Forms */
+.en__field--validationFailed .en__field__input {
+    border: solid 2px #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);   
+}
+
+/* Forms */
+.en__field--validationFailed .en__field__error {
+    color: red;
+    font-size: 90%;
+    margin-top: 2px;
+}
+
+/* Forms */
+.en__component--formblock .en__field.en__field--validationFailed {
+    padding-bottom: 5px !important;
+}
+
+/* Forms */
+.en__field__label {
+    width: auto !important;
+}
+
+/* Forms */
+.en__field__element--text, .en__field__input--text, .en__field__element--textarea, .en__field__input--textarea {
+    width: 100% !important;
+}
+
+/* Forms */
+.en__field__element--checkbox .en__field__label--item {
+    display: inline !important;
+}
+
+/* Forms */
+.en__field__element--select .en__field__item, .en__field__input--select {
+    width: 100%;
+}
+
+/* EN Defaults */
+#en__pagebuilder .en__component--row {
+    margin-bottom: 25px;
+}
+
+/* Server validation error */
+.en__errorHeader {
+    background-color: red;
+    padding: 10px;
+}
+/* Server validation error */
+.en__errorList {
+    background-color: red;
+    padding: 10px;
+    margin-bottom: 20px !important;
+}
+/* Server validation error */
+.en__errorList .en__error {
+    padding-left: 15px;
+    list-style-position: inside;
+}
+
+/* Layout */
+@media only screen and (max-width: 767px) {
+    .en__component--row,
+    .en__component--row.en__component--advrow {
+        display: block !important;
+    }
+}
+
+/* Layout */
+.en__component--imageblock {
+    margin-bottom: 1rem;
+}

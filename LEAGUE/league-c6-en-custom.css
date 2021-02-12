@@ -1,0 +1,56 @@
+.form-control {
+    border-radius: 0 !important;
+}
+
+.border-light {
+    border-color: #dbdcdc !important;
+}
+
+.donate-button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.link-white {
+    color: white;
+}
+
+.link-white:hover {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.bg-grey {
+    background-color: #EDEEED;
+}
+
+.bg-dark-blue {
+    background-color: #27285C;
+}
+
+.read-more-toggle {
+    display: block;
+    max-width: 180px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.privacy-policy-text {
+    color: #CCCCCC !important;
+    font-size: 60%;
+    font-weight: 400;
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/ribbonright.png?v=1610381773000);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: bottom -70px right 0;
+}

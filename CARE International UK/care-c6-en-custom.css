@@ -1,0 +1,23 @@
+.form-control {
+    border-radius: 0 !important;
+}
+
+.border-light {
+    border-color: #dbdcdc !important;
+}
+
+.bg-white-transparent {
+	background-color: rgba(255, 255, 255, .85);
+}
+
+.link-white {
+    color: white;
+}
+
+.link-white:hover {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}

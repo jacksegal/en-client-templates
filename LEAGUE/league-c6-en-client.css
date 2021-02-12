@@ -1,0 +1,234 @@
+/* Typography */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+/* Typography */
+.h1, h1, .h2, h2, .h3, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Typography */
+.h2, h2, .h3, h3, .h1, h1, .highlighted, .text-container .en__component--imageblock {
+    margin-bottom: 1rem !important;
+}
+
+/* Typography */
+.h2, h2 {
+    font-size: 1.5rem;
+}
+
+/* Typography */
+.h3, h3 {
+    font-size: 1.25rem;
+}
+
+/* Typography */
+.text-small p {
+    font-size: 70% !important;
+}
+
+/* Typography */
+.en__field.en__mandatory > label::after {
+    content: " *";
+    color: #f9461c;
+}
+
+/* Typography */
+a {
+    color: #1AA896;
+}
+
+/* Typography */
+a:hover {
+    color: #1AA896;
+}
+
+/* Typography */
+.footer a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Typography */
+.footer a:focus, .footer a:hover {}
+
+/* Typography */
+ul {}
+
+/* Typography */
+.highlighted h1, .highlighted h2, .highlighted h3 {
+    letter-spacing: 1px;
+    display: inline;
+    line-height: 1.2;
+    background-color: #F500F0;
+    box-shadow: 7px 0 0 #F500F0, -7px 0 0 #F500F0;
+    -moz-box-shadow: 7px 0 0 #F500F0, -7px 0 0 #F500F0;
+    -webkit-box-shadow: 7px 0 0 #F500F0, -7px 0 0 #F500F0;
+    padding: 8px 0 0 0;
+}
+
+/* Selection highlight */
+::selection {
+    background: #1AA896;
+    /* WebKit/Blink Browsers */
+    color: black;
+}
+
+/* Selection highlight */
+::-moz-selection {
+    background: #1AA896;
+    /* Gecko Browsers */
+    color: black;
+}
+
+/* Read more */
+.read-more-toggle {
+    display: inline-block;
+    background-color: #1AA896;
+    border: solid 1px #1AA896;
+    color: white;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Read more */
+.read-more-toggle:hover {
+    cursor: pointer;
+    border: solid 1px #1AA896;
+    color: #1AA896;
+    background-color: white;
+}
+
+/* Read more */
+.read-more-toggle p {
+    margin-bottom: 0 !important;
+}
+
+/* EN Progress Bar */
+.enWidget--progressBar {
+    padding: 0 !important;
+    color: white !important;
+}
+
+/* EN Progress Bar */
+.enWidget--progressBar p span {
+    color: white !important;
+}
+
+/* EN Progress Bar */
+.enWidget__progress {
+    height: 35px !important;
+}
+
+/* EN Progress Bar */
+.enWidget__fill__count {
+    font-size: 16px !important;
+}
+
+/* Buttons */
+.btn-skip {
+    margin-top: 50px;
+    border: solid 1px #1E1E1E;
+    color: #1E1E1E;
+    text-align: left;
+    padding-left: 21px;
+    text-transform: uppercase;
+}
+
+/* Buttons */
+.btn-skip:hover {
+    border: solid 1px white;
+    background-color: #1E1E1E;
+    color: white;
+}
+
+/* Buttons */
+.btn-en-submit {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background-color: #EB5D40;
+    border: #EB5D40 1px solid;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 !important;
+}
+
+/* Buttons */
+.btn-en-submit:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background-color: white;
+    border: #EB5D40 1px solid;
+    color: #EB5D40;
+}
+
+.donate-button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* Donation Amount */
+.donate-amounts .en__field__label--item {
+    background-color: #EB5D40;
+    border: solid 2px #EB5D40;
+    line-height: 2.5;
+    width: 100% !important;
+
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+/* Donation Amount */
+.donate-amounts .en__field--donationAmt .en__field__label--item:hover {
+    cursor: pointer;
+    background-color: white;
+    border: #EB5D40 2px solid;
+    color: #EB5D40;
+}
+
+/* Donation Amount */
+.donate-amounts input[type="radio"]:checked+label{  
+    background-color: white; 
+    color: #EB5D40;
+    border: solid 2px #EB5D40;
+}
+
+/* Donation Frequency Toggle */
+.donate-type .en__field__label--item {
+    background-color: white;
+    border: solid 1px #6b6b6b;
+    line-height: 1.5;
+    width: 100% !important;
+    text-align: center;
+    color: #6b6b6b;
+    font-size: 24px;
+}
+
+/* Donation Frequency Toggle */
+.donate-type input[type="radio"]:checked+label{  
+    font-family: 'Fira Sans Condensed', sans-serif;
+    background-color: #E36F1E;
+    border: #E36F1E 1px solid;
+    color: white;
+    position: relative;
+}
+
+/* Donation Frequency Toggle */
+.donate-type input[type="radio"]:checked+label:after {
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-top: solid 15px #E36F1E;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+    transform: translateX(-50%);
+}
