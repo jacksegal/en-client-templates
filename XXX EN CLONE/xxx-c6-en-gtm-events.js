@@ -12,7 +12,7 @@ function fireTrackingOnSubmit() {
             eventLabel: "Successful",
             pageName: pageName,
             campaignName: campaignName,
-        }
+        };
         window.dataLayer.push(dataLayerObject);
 
         console.group("%cGTM", "color: #241C15; background-color: #4EE4C4; padding: 4px; font-weight: 400;");

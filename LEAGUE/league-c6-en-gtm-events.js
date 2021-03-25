@@ -9,10 +9,13 @@ function fireTrackingOnSubmit() {
             event: "gaEvent",
             eventCategory: pageType,
             eventAction: "Signup",
-            eventLabel: "Successful",
+            eventLabel: "undefined",
             pageName: pageName,
             campaignName: campaignName,
-        }
+            //optIn: true / false / undefined
+            //giftAid: true / false / undefined
+            //paymentProvider: true / false / undefined
+        };
         window.dataLayer.push(dataLayerObject);
 
         console.group("%cGTM", "color: #241C15; background-color: #4EE4C4; padding: 4px; font-weight: 400;");
@@ -33,7 +36,7 @@ $( ".share_button" ).click(function() {
       eventLabel: social,
       pageName: pageName,
       campaignName: campaignName,
-    }
+    };
     window.dataLayer.push(dataLayerObject);
 
     console.group("%cGTM", "color: #241C15; background-color: #4EE4C4; padding: 4px; font-weight: 400;");
@@ -42,7 +45,7 @@ $( ".share_button" ).click(function() {
     console.groupEnd();
 }); 
 
-/* Skip */
+/* Share Skip */
 $('.btn-uuk-skip').click(function(){
     window.dataLayer = window.dataLayer || [];
     var dataLayerObject = {
@@ -52,7 +55,7 @@ $('.btn-uuk-skip').click(function(){
         eventLabel: "undefined",
         pageName: pageName,
         campaignName: campaignName,
-    }
+    };
     window.dataLayer.push(dataLayerObject);
 
     console.group("%cGTM", "color: #241C15; background-color: #4EE4C4; padding: 4px; font-weight: 400;");
@@ -71,7 +74,7 @@ $('.donate-button').click(function(){
         eventLabel: this.textContent.replace("£", ""),
         pageName: pageName,
         campaignName: campaignName,
-    }
+    };
     window.dataLayer.push(dataLayerObject);  
 
     console.group("%cGTM", "color: #241C15; background-color: #4EE4C4; padding: 4px; font-weight: 400;");

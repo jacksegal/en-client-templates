@@ -1,0 +1,344 @@
+/* ***** */
+/* RESET */
+/* ***** */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+form.en__component--page,
+#en__pagebuilder .en__container {
+    width: 100%;
+}
+img {
+    max-width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+a {
+    color: inherit;
+}
+
+/* ***** */
+/* RESET */
+/* ***** */
+
+
+
+
+/* ***** */
+/* FORMS */
+/* ***** */
+
+.en__component--contactblock {
+    background-color: transparent !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
+.en__field {
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0 !important;
+}
+.form-check-label {
+    margin-left: 5px;
+}
+input[type=checkbox], input[type=radio] {
+    transform: scale(2);
+    margin-left: 5px;
+}
+.en__field--checkbox .en__field__label, .en__field--radio .en__field__label {
+    vertical-align: middle !important;
+}
+.en__field--checkbox .en__field__label, .en__field--radio .en__field__label {
+    margin-bottom: 0 !important;
+}
+.en__field__input--radio, .en__field__input--checkbox {
+    margin-right: 8px;
+}
+.en__field__element--radio .en__field__label--item, .en__field__element--checkbox .en__field__label--item {
+    font-size: 88%;
+}
+
+.en__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.en__field__label, .en__field__element {
+    order: 1;
+}
+
+.en__field__error {
+    order: 2;
+}
+
+.en__field--validationFailed .en__field__input {
+    border: solid 2px #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);   
+}
+
+.en__field--validationFailed .en__field__error {
+    color: red;
+    font-size: 90%;
+    margin-top: 2px;
+}
+
+.en__component--formblock .en__field.en__field--validationFailed {
+    padding-bottom: 5px !important;
+}
+
+.en__field__label {
+    width: auto !important;
+}
+.en__field__element--text, .en__field__input--text, .en__field__element--textarea, .en__field__input--textarea {
+    width: 100% !important;
+}
+
+.en__field__element--checkbox .en__field__label--item {
+    display: inline !important;
+}
+
+.en__field__item {
+    display: block !important;
+}
+
+/* ***** */
+/* FORMS */
+/* ***** */
+
+/* ***** */
+/* SHARE */
+/* ***** */
+
+.share-button {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 17px 49px 17px 21px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-size: 18px;
+    text-align: left;
+    color: white;
+    display: block;
+    width: 100%;
+    position: relative;
+    font-weight: normal;
+    border: none !important;
+}
+.share-button:after {
+    content: "";
+    width: 34px;
+    height: 34px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.share-button:hover {
+    text-decoration: none !important;
+    color: #05334C !important;
+}
+.facebook-button {
+    -webkit-box-shadow: 0 2px 0 0 #314f8c;
+    box-shadow: 0 2px 0 0 #314f8c;
+    background-color: #4267b2;
+}
+.facebook-button:hover {
+    background-color: #5074be !important;
+}
+.facebook-button:after {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/375/share-icon-fb.png?v=1596971649000);
+    width: 16px;
+    height: 26px;
+    right: 36px;
+    top: 51%
+}
+.twitter-button {
+    background-color: #1DA1F2;
+    -webkit-box-shadow: 0 2px 0 0 #0c85d0;
+    box-shadow: 0 2px 0 0 #0c85d0;
+}
+.twitter-button:hover {
+    background-color: #35abf3 !important;
+}
+.twitter-button:after {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/375/share-icon-twitter.png?v=1596971648000);
+}
+.whatsapp-button {
+    background-color: #25D366;
+    -webkit-box-shadow: 0 2px 0 0 #1da851;
+    box-shadow: 0 2px 0 0 #1da851;
+    display: none;
+}
+.whatsapp-button:hover {
+    background-color: #36dc74 !important;
+}
+.whatsapp-button:after {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/375/share-icon-whatsapp.png?v=1596971648000);
+}
+@media (max-width: 767px) {
+    .whatsapp-button {
+        display: block;
+    }
+}
+.email-button {
+    background-color: #787878;
+    -webkit-box-shadow: 0 2px 0 0 #5f5f5f;
+    box-shadow: 0 2px 0 0 #5f5f5f;
+}
+.email-button:hover {
+    background-color: #858585 !important;
+}
+.email-button:after {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/375/share-icon-email.png?v=1596971650000);
+}
+
+/* ***** */
+/* SHARE */
+/* ***** */
+
+/* ***** */
+/* UTILS */
+/* ***** */
+
+.c6-hidden {
+    display: none;
+}
+#en__pagebuilder .c6-hidden {
+    display: block;
+}
+.en-only {
+    display: none;
+}
+#en__pagebuilder .en-only {
+    display: block !important;
+}
+@media only screen and (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+    #en__pagebuilder .mobile-only {
+        display: block !important;
+        max-width: 400px !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* ***** */
+/* UTILS */
+/* ***** */
+
+/* ********** */
+/* GENERAL EN */
+/* ********** */
+
+/* Page Builder */
+#en__pagebuilder .en__component--row {
+    margin-bottom: 25px;
+}
+
+/* Server validation error */
+.en__errorHeader {
+    background-color: red;
+    padding: 10px;
+}
+/* Server validation error */
+.en__errorList {
+    background-color: red;
+    padding: 10px;
+}
+/* Server validation error */
+.en__errorList .en__error {
+    padding-left: 15px;
+    list-style-position: inside;
+}
+
+/* ********** */
+/* GENERAL EN */
+/* ********** */
+
+
+
+/* ****** */
+/* LAYOUT */
+/* ****** */
+
+/* Turn to mobile earlier than EN */
+@media only screen and (max-width: 767px) {
+    .en__component--row,
+    .en__component--row.en__component--advrow {
+        display: block !important;
+    }
+}
+
+
+.header {
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+    .header {
+        margin-bottom: 0;
+    }
+    .header .main-logo {
+        padding: 10px;
+    }
+}
+
+/* Mobile Header - Add spacing */
+.mobile-header .en__component--copyblock {
+    padding-top: 15px !important;
+    padding-bottom: 10px !important;
+}
+.mobile-header .en__component--imageblock {
+    padding: 0 !important;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.mobile-header h1,
+.mobile-header h3 {
+    margin-bottom: 0 !important;
+}
+
+.body-container {
+    margin-bottom: 75px;
+}
+
+
+/* ****** */
+/* LAYOUT */
+/* ****** */
+
+
+
+/* ### ELEMENTS ### */
+.more-info-toggle {
+    font-size: 1.5rem;
+}
+.more-info-toggle:hover {
+    cursor: pointer;
+}
+.more-info-text {
+    display: none;
+}
+
+#en__pagebuilder .more-info-text {
+    display: block !important;
+}

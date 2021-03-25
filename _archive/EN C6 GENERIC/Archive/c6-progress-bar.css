@@ -1,0 +1,18 @@
+/* ************ */
+/* PROGRESS BAR */
+/* ************ */
+
+.enWidget--progressBar {
+    padding: 0 !important;
+    font-family: 'UniversNextPro-Regular', sans-serif !important;
+    color: white !important;
+}
+.enWidget--progressBar p span {
+    color: white !important;
+}
+.enWidget__progress {
+    height: 35px !important;
+}
+.enWidget__fill__count {
+    font-size: 16px !important;
+}

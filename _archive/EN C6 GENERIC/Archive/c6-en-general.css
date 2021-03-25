@@ -1,0 +1,27 @@
+/* ********** */
+/* GENERAL EN */
+/* ********** */
+
+#en__pagebuilder .en__component--row {
+    margin-bottom: 25px;
+}
+/* ### ERROR HANDLING ### */
+/* Server validation error */
+.en__errorHeader {
+    background-color: red;
+    padding: 10px;
+}
+/* Server validation error */
+.en__errorList {
+    background-color: red;
+    padding: 10px;
+}
+/* Server validation error */
+.en__errorList .en__error {
+    padding-left: 15px;
+    list-style-position: inside;
+}
+
+/* ********** */
+/* GENERAL EN */
+/* ********** */

@@ -1,0 +1,311 @@
+/* Typography */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+/* Typography */
+.h1, h1, .h2, h2, .h3, h3 {
+    font-family: 'Faktos', 'Lato', sans-serif;
+}
+
+/* Typography */
+.h2, h2, .h3, h3, .h1, h1, .highlighted, .text-container .en__component--imageblock {
+    margin-bottom: 1rem !important;
+}
+
+/* Typography */
+.h2, h2 {
+    font-size: 1.5rem;
+}
+
+/* Typography */
+.h3, h3 {
+    font-size: 1.25rem;
+}
+
+/* Typography */
+.text-small p {
+    font-size: 70% !important;
+}
+
+/* Typography */
+.en__field.en__mandatory > label::after {
+    content: " *";
+    color: #f9461c;
+}
+
+/* Typography */
+a {}
+
+/* Typography */
+a:hover {}
+
+/* Typography */
+.footer a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Typography */
+.footer a:focus, .footer a:hover {}
+
+/* Typography */
+ul {}
+
+/* Typography */
+.highlighted h1, .highlighted h2, .highlighted h3 {
+    letter-spacing: 1px;
+    display: inline;
+    line-height: 1.2;
+    background-color: #00A58C;
+    box-shadow: 7px 0 0 #00A58C, -7px 0 0 #00A58C;
+    -moz-box-shadow: 7px 0 0 #00A58C, -7px 0 0 #00A58C;
+    -webkit-box-shadow: 7px 0 0 #00A58C, -7px 0 0 #00A58C;
+    padding: 8px 0;
+}
+
+/* Selection highlight */
+::selection {
+    background: #00A58C;
+    /* WebKit/Blink Browsers */
+    color: black;
+}
+
+/* Selection highlight */
+::-moz-selection {
+    background: #00A58C;
+    /* Gecko Browsers */
+    color: black;
+}
+
+/* Read more */
+.read-more-toggle {
+    display: inline-block;
+    border: solid 1px #1E1E1E;
+    padding: 10px;
+}
+
+/* Read more */
+.read-more-toggle:hover {
+    cursor: pointer;
+}
+
+/* Read more */
+.read-more-toggle p {
+    margin-bottom: 0 !important;
+}
+
+/* EN Progress Bar */
+.enWidget--progressBar {
+    padding: 0 !important;
+    color: white !important;
+}
+
+/* EN Progress Bar */
+.enWidget--progressBar p span {
+    color: white !important;
+}
+
+/* EN Progress Bar */
+.enWidget__progress {
+    height: 35px !important;
+}
+
+/* EN Progress Bar */
+.enWidget__fill__count {
+    font-size: 16px !important;
+}
+
+/* Buttons */
+.btn-skip {
+    margin-top: 50px;
+    border: solid 1px #1E1E1E;
+    color: #1E1E1E;
+    text-align: left;
+    padding-left: 21px;
+    text-transform: uppercase;
+}
+
+/* Buttons */
+.btn-skip:hover {
+    border: solid 1px white;
+    background-color: #1E1E1E;
+    color: white;
+}
+
+/* Buttons */
+.btn-en-submit {
+    font-family: 'Faktos', 'Lato', sans-serif;
+    text-transform: uppercase;
+    background-color: #FEEC02;
+    border: black 1px solid;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0 !important;
+}
+
+/* Buttons */
+.btn-en-submit:hover {
+    font-family: 'Faktos', 'Lato', sans-serif;
+    text-transform: uppercase;
+    background-color: black;
+    border: #FEEC02 1px solid;
+    color: #FEEC02;
+}
+
+/* Donation Amount */
+.donate-amounts .en__field__label--item {
+    background-color: #EB5D40;
+    border: solid 2px #EB5D40;
+    line-height: 2.5;
+    width: 100% !important;
+
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+/* Donation Amount */
+.donate-amounts .en__field--donationAmt .en__field__label--item:hover {
+    cursor: pointer;
+    background-color: white;
+    border: #EB5D40 2px solid;
+    color: #EB5D40;
+}
+
+/* Donation Amount */
+.donate-amounts input[type="radio"]:checked+label{  
+    background-color: white; 
+    color: #EB5D40;
+    border: solid 2px #EB5D40;
+}
+
+/* Donation Frequency Toggle */
+.donate-type .en__field__label--item {
+    background-color: white;
+    border: solid 1px #6b6b6b;
+    line-height: 1.5;
+    width: 100% !important;
+    text-align: center;
+    color: #6b6b6b;
+    font-size: 24px;
+}
+
+/* Donation Frequency Toggle */
+.donate-type input[type="radio"]:checked+label{  
+    font-family: 'Fira Sans Condensed', sans-serif;
+    background-color: #E36F1E;
+    border: #E36F1E 1px solid;
+    color: white;
+    position: relative;
+}
+
+/* Donation Frequency Toggle */
+.donate-type input[type="radio"]:checked+label:after {
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-top: solid 15px #E36F1E;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+    transform: translateX(-50%);
+}
+
+/* Progress Steps */
+.progress-steps-list {
+    list-style: none; 
+    align-items: center; 
+    display: flex; 
+    padding-left: 0;
+}
+
+/* Progress Steps */
+.progress-step-item {
+    position: relative;
+    width: 100%;
+}
+
+/* Progress Steps */
+.progress-steps-list .progress-step-item:last-child {
+    width: initial !important;
+}
+
+/* Progress Steps */
+.progress-step-divider {
+    display: flex;
+    align-items: center; 
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* Progress Steps */
+.progress-step-divider-line {
+    width: 100%;
+    height: 0.125rem;
+}
+
+/* Progress Steps */
+.progress-step-complete .progress-step-divider-line {
+    background-color: #F4B223;
+}
+
+/* Progress Steps */
+.progress-step-active .progress-step-divider-line, .progress-step-inactive .progress-step-divider-line {
+    background-color: lightgrey;
+}
+
+/* Progress Steps */
+.progress-step-circle {
+    border-radius: 9999px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    position: relative;
+    width: 2rem;
+}
+
+/* Progress Steps */
+.progress-step-complete .progress-step-circle {
+    background-color: #F4B223;
+}
+
+/* Progress Steps */
+.progress-step-active .progress-step-circle {
+    border-color: #F4B223; 
+    border-style: solid;
+    background-color: white;
+    border-width: 2px;
+}
+
+/* Progress Steps */
+.progress-step-inactive .progress-step-circle {
+    border-color: lightgrey; 
+    border-style: solid;
+    background-color: white;
+    border-width: 2px;
+}
+
+/* Progress Steps */
+.progress-step-tick {
+    width: 15px; 
+    height: 15px; 
+    color: white;
+}
+
+/* Progress Steps */
+.progress-step-dot {
+    height: 8px; 
+    width: 8px; 
+    background-color: #F4B223; 
+    border-radius: 9999px
+}

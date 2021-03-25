@@ -1,0 +1,65 @@
+/* ***** */
+/* FORMS */
+/* ***** */
+
+.form-control {
+    border-radius: 0 !important;
+}
+.en__field {
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0 !important;
+}
+.form-check-label {
+    margin-left: 5px;
+}
+input[type=checkbox],
+input[type=radio] {
+    transform: scale(2);
+    margin-left: 5px;
+}
+.en__field--checkbox .en__field__label,
+.en__field--radio .en__field__label {
+    vertical-align: middle !important;
+}
+.en__field--checkbox .en__field__label,
+.en__field--radio .en__field__label {
+    margin-bottom: 0 !important;
+}
+.en__field__input--radio,
+.en__field__input--checkbox {
+    margin-right: 8px;
+}
+.en__field__element--radio .en__field__label--item,
+.en__field__element--checkbox .en__field__label--item {
+    font-size: 88%;
+}
+.en__field--validationFailed .en__field__error {
+    color: red;
+    font-size: 90%;
+}
+.en__field--validationFailed {
+    border: solid 1px red;
+    padding: 5px;
+    margin-bottom: 10px !important;
+}
+.en__component--formblock .en__field.en__field--validationFailed {
+    padding-bottom: 5px !important;
+}
+.en__field--text .en__field__label {
+    display: none;
+}
+.en__field__label {
+    width: auto !important;
+}
+.en__field__element--text,
+.en__field__input--text {
+    width: 100% !important;
+}
+
+.en__field__element--checkbox .en__field__label--item {
+    display: inline !important;
+}
+
+/* ***** */
+/* FORMS */
+/* ***** */

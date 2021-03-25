@@ -66,12 +66,6 @@ C6.Donate = {
         	}
         }
 	},
-	setBankDetails: function() {
-        if ($('.storage-bank-details').length) {
-            $('.storage-sort-code').text(sessionStorage.getItem('sortCode'));
-        	$('.storage-account-number').text(sessionStorage.getItem('accountNumber'));
-        }
-	},
 	selectOtherAmtOnOtherInput: function() {
         $('input[name="transaction.donationAmt.other"]').on("input", function(){
         	$('input[name="transaction.donationAmt"][value="Other"]').prop("checked", true).change();
@@ -112,11 +106,7 @@ C6.Donate = {
 	        });
 		}
 	},
-	saveDataOnSubmit: function() {
-    	if($('input[name="transaction.recurrpay"]').length) {
-    	    sessionStorage.setItem('recurrpay', $('input[name="transaction.recurrpay"]:checked').val());
-    	}
-    	
+	saveDonationAmtToStorage: function() {
     	if($('input[name="transaction.donationAmt"]').length) {
     	    var donationAmount = $('input[name="transaction.donationAmt"]:checked').val();
     	    if(donationAmount == 'Other') {
@@ -124,11 +114,56 @@ C6.Donate = {
     	    } else {
     	        sessionStorage.setItem('donationAmt', donationAmount);
     	    }
-    	}  
-    	
-    	if($('input[name="transaction.recurrfreq"]').length) {
-    		sessionStorage.setItem('accountNumber', $('input[name="transaction.othamt2"]').val());
-    		sessionStorage.setItem('sortCode', $('input[name="transaction.othamt1"]').val());
     	}
+	},
+	paymentTypeToggle: function () {
+		if ($('.donate-type').length) {
+			// Queries
+			var primaryAmtQuery = '.donate-amounts input[type="radio"][value!="Other"]';
+			var altAmtQuery = '.alt-donate-amounts input[type="radio"]';
+
+			// Clones
+			var primaryAmtClone = $(primaryAmtQuery).clone();
+			var primaryLabelClone = $(primaryAmtQuery).next('label').clone();
+
+			var altAmtClone = $(altAmtQuery).clone();
+			var altLabelClone = $(altAmtQuery).next('label').clone();
+
+			// Elements
+			var primaryAmtElement = $(primaryAmtQuery);
+			var altAmtElement = $(altAmtQuery);
+
+			setTimeout(function(){
+				if($('.donate-type input[type="radio"]:checked').val() == 'PRIMARY') {
+					switchToPrimary();
+				} else {
+					switchToAlt();
+				}
+			}, 500);
+
+			$('.donate-type input[type="radio"]').on("change", function(){
+				if(this.value == 'ALTERNATIVE') {
+					switchToAlt();
+				} else {
+					switchToPrimary();
+				}
+			});
+		}
+
+		function switchToAlt() {
+			switchAmts(primaryAmtElement,altAmtClone,altLabelClone);
+		}
+
+		function switchToPrimary() {
+			switchAmts(primaryAmtElement,primaryAmtClone,primaryLabelClone);
+		}
+
+		function switchAmts(element,values,labels) {
+			for (let i = 0; i < element.length; i++) {
+				var newAmt = $(values[i]).val();
+				var newLabel = $(labels[i]).text();
+				$(element[i]).val(newAmt).next('label').text(newLabel);
+			}
+		}
 	},
 }

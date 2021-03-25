@@ -85,4 +85,28 @@ C6.En = {
             $( ".en__errorList" ).appendTo( '.en__errorHeader' );
         }
     },
+    saveDataToStorage: function(storageMap) {
+        storageMap.forEach(function(element) {
+            if($(element.storageValue).length) {
+                sessionStorage.setItem(element.storageKey, $(element.storageValue).val());
+            }
+        });
+    },
+    getDataFromStorage: function(storageMap) {
+        storageMap.forEach(function(element) {
+            if($(element.target).length) {
+                $(element.target).text(sessionStorage.getItem(element.key));
+            }
+        });
+    },
+    addMaxLength: function(fields) {
+        fields.forEach(function(field) {
+            if($(field.key).length) {
+                $(field.key).attr('maxlength', field.maxlength);
+            }
+        });
+    },
+    updateCurrentYear: function() {
+        $('.current-year').text(new Date().getFullYear());
+    }
 }; 

@@ -1,0 +1,93 @@
+/* ***** */
+/* SHARE */
+/* ***** */
+
+.share-button {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 17px 49px 17px 21px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-size: 18px;
+    text-align: left;
+    color: white;
+    display: block;
+    width: 100%;
+    position: relative;
+    font-weight: normal;
+    border: none !important;
+}
+.share-button:after {
+    content: "";
+    width: 34px;
+    height: 34px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.share-button:hover {
+    text-decoration: none !important;
+    color: #05334C !important;
+}
+.facebook-button {
+    -webkit-box-shadow: 0 2px 0 0 #314f8c;
+    box-shadow: 0 2px 0 0 #314f8c;
+    background-color: #4267b2;
+}
+.facebook-button:hover {
+    background-color: #5074be !important;
+}
+.facebook-button:after {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/375/share-icon-fb.png?v=1596971649000);
+    width: 16px;
+    height: 26px;
+    right: 36px;
+    top: 51%
+}
+.twitter-button {
+    background-color: #1DA1F2;
+    -webkit-box-shadow: 0 2px 0 0 #0c85d0;
+    box-shadow: 0 2px 0 0 #0c85d0;
+}
+.twitter-button:hover {
+    background-color: #35abf3 !important;
+}
+.twitter-button:after {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/375/share-icon-twitter.png?v=1596971648000);
+}
+.whatsapp-button {
+    background-color: #25D366;
+    -webkit-box-shadow: 0 2px 0 0 #1da851;
+    box-shadow: 0 2px 0 0 #1da851;
+    display: none;
+}
+.whatsapp-button:hover {
+    background-color: #36dc74 !important;
+}
+.whatsapp-button:after {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/375/share-icon-whatsapp.png?v=1596971648000);
+}
+@media (max-width: 767px) {
+    .whatsapp-button {
+        display: block;
+    }
+}
+.email-button {
+    background-color: #787878;
+    -webkit-box-shadow: 0 2px 0 0 #5f5f5f;
+    box-shadow: 0 2px 0 0 #5f5f5f;
+}
+.email-button:hover {
+    background-color: #858585 !important;
+}
+.email-button:after {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/375/share-icon-email.png?v=1596971650000);
+}
+
+/* ***** */
+/* SHARE */
+/* ***** */

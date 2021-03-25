@@ -1,0 +1,10 @@
+.multi-colored h1 {
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 0;
+    background: -webkit-linear-gradient(
+            128deg
+            , rgba(250,182,0,1) 30%, rgba(231,62,17,1) 50%, rgba(100,94,166,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -41,7 +41,7 @@
 .donate-amounts .en__field--donationAmt .en__field__item--other:before {
     position: absolute;
     top: 50%;
-    content: "£";
+    content: "\00a3";
     left: 10px;
     font-size: 22px;
     transform: translateY(-50%);

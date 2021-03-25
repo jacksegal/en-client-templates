@@ -1,0 +1,141 @@
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #1E1E1E;
+}
+
+.h1, h1, .h2, h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.h3, h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/*.body-container a {
+    color: #1E1E1E;
+    border-bottom: 1px dashed #00AEEF;
+    transition: all .3s ease;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.body-container a:focus, .body-container a:hover {
+    background-color: #6DD3F9;
+    border: none;
+    text-decoration: none;
+}*/
+
+a {
+    color: #52E4C4;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.highlighted h1, .highlighted h2, .highlighted h3 {
+    letter-spacing: 1px;
+    display: inline;
+    line-height: 1.2;
+    background-color: #F500F0;
+    box-shadow: 7px 0 0 #F500F0, -7px 0 0 #F500F0;
+    -moz-box-shadow: 7px 0 0 #F500F0, -7px 0 0 #F500F0;
+    -webkit-box-shadow: 7px 0 0 #F500F0, -7px 0 0 #F500F0;
+    padding: 8px 0 0 0;
+}
+
+
+/* ****** */
+/* FOOTER */
+/* ****** */
+
+.footer {
+    margin-top: auto;
+}
+
+.footer {
+    background-color: #58595b;
+    /*color: #a3a3a3;*/
+    padding: 20px;
+}
+
+.footer a {
+    /*color: #a3a3a3;*/
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer a:focus, .footer a:hover {
+/*    color: white;
+    text-decoration: none;*/
+}
+
+/* ****** */
+/* FOOTER */
+/* ****** */
+
+
+::selection {
+    background: #FAFF01;
+    /* WebKit/Blink Browsers */
+    color: black;
+}
+::-moz-selection {
+    background: #FAFF01;
+    /* Gecko Browsers */
+    color: black;
+}
+
+.read-more-toggle {
+    display: inline-block;
+    border: solid 1px #1E1E1E;
+    padding: 10px;
+}
+
+.read-more-toggle:hover {
+    cursor: pointer;
+}
+
+.read-more-toggle p {
+    margin-bottom: 0 !important;
+}
+
+
+.btn-skip {
+    margin-top: 50px;
+    border: solid 1px #1E1E1E;
+    color: #1E1E1E;
+    text-align: left;
+    padding-left: 21px;
+    text-transform: uppercase;
+}
+.btn-skip:hover {
+    border: solid 1px white;
+    background-color: #1E1E1E;
+    color: white;
+}
+.btn-en-submit {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    background-color: #F500F0;
+    border: black 1px solid;
+    color: black;
+    margin-top: 10px;
+    border-radius: 0 !important;
+}
+.btn-en-submit:hover {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    background-color: black;
+    border: #F500F0 1px solid;
+    color: #F500F0;
+}
+
+.privacy-policy-text {
+    color: #CCCCCC !important;
+    font-size: 60%;
+    font-weight: 400;
+}

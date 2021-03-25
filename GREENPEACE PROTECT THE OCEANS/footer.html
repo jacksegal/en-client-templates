@@ -1,0 +1,65 @@
+
+<!-- {{ START OF EN FOOTER }} -->
+</div>
+</div>
+</section>
+
+
+<!-- Framework JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+
+<!-- C6 -->
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1844/gppto-c6-en-util.js?v=1613137425"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1844/gppto-c6-en-mp.js?v=1613137425"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1844/gppto-c6-en-cookie.js?v=1613137425"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1844/gppto-c6-en-share.js?v=1613137425"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1844/gppto-c6-en-spa.js?v=1614510520"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1844/gppto-c6-en-donate.js?v=1613137425"></script>
+
+<!-- Client Utils -->
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1844/gppto-c6-en-gtm-events.js?v=1614512177000"></script>
+
+
+
+<!-- App -->
+<script>
+    $(function() {
+        C6.En.labelsToPlaceholders();
+        C6.En.trimEmail();
+        C6.En.readMoreToggle();
+        C6.En.removeFormValidationOnInput();
+        C6.En.addLogicalCssClasses();
+        C6.En.createErrorContainer();
+        C6.En.updateNextPageUrl();
+        C6.Share.shareWindowInit();
+        C6.Spa.init();
+
+
+        /* Email to Target */
+        C6.Mp.init();
+
+    });
+</script>
+
+
+<script>
+    window.enOnSubmit = function(){
+        fireTrackingOnSubmit();
+        return true;
+    }
+</script>
+
+<script>
+    $('.postcard-images input.en__field__input--imageSelectField[type=radio]').change(function() {
+        $('.postcard-images .question-selected-image').removeClass('question-selected-image');
+        if($(this).is(':checked')) {
+            $(this).parents('.en__imageSelectField').find('.en__imageSelectField__image').addClass('question-selected-image');
+        }
+    });
+</script>
+
+</body>
+</html>
