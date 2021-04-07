@@ -4,41 +4,41 @@ if (typeof C6 == 'undefined') {
 
 C6.Donate = {
     init: function() {},
-    fieldValidation: function() {
-        if($('#en__field_transaction_ccnumber').length ){
-            var cleave = new Cleave('#en__field_transaction_ccnumber', {
+    fieldValidation: function(ccNo='#en__field_transaction_ccnumber',sortCode='#en__field_transaction_othamt1',accountNo='#en__field_transaction_othamt2',cvv='#en__field_transaction_ccvv') {
+        if($(ccNo).length ){
+            var cleave = new Cleave(ccNo, {
                 creditCard: true,
                 onCreditCardTypeChanged: function (type) {
                     console.log("%cCard type:\t "+type, "color: #241C15; background-color: #FF3EBF; padding: 4px; font-weight: 400;");
                 }
-            });             
+            });
         }
-        
-        if($('#en__field_transaction_othamt1').length ){
-            var cleave = new Cleave('#en__field_transaction_othamt1', {
+
+        if($(sortCode).length ){
+            var cleave = new Cleave(sortCode, {
                 delimiter: '-',
                 blocks: [2, 2, 2],
                 numericOnly: true
-            });     
+            });
         }
-        
-        // Account Number 
-        if($('#en__field_transaction_othamt2').length ){
-            var cleave = new Cleave('#en__field_transaction_othamt2', {
+
+        // Account Number
+        if($(accountNo).length ){
+            var cleave = new Cleave(accountNo, {
                 delimiter: '',
                 blocks: [8],
                 numericOnly: true
-            });     
+            });
         }
-        
-        // CVV - Max Length 
-        if($('#en__field_transaction_ccvv').length) {
-            $('#en__field_transaction_ccvv').attr('maxlength', 4);
-            var cleave = new Cleave('#en__field_transaction_ccvv', {
+
+        // CVV - Max Length
+        if($(cvv).length) {
+            $(cvv).attr('maxlength', 4);
+            var cleave = new Cleave(cvv, {
                 numeral: true,
                 numeralDecimalMark: '',
                 delimiter: '',
-            }); 
+            });
         }
     },
     displayDonationAmt: function() {
@@ -55,11 +55,11 @@ C6.Donate = {
             var donationAmt = sessionStorage.getItem('donationAmt');
             if(donationAmt) {
                 giftAidAmt = (donationAmt/4)*5;
-                
+
                 if(giftAidAmt % 1 != 0) {
                     giftAidAmt = giftAidAmt.toFixed(2)
                 }
-                
+
                 $('.gift-aid-calculation .donation-amt').text(donationAmt);
                 $('.gift-aid-calculation .gift-aid-amt').text(giftAidAmt);
                 $('.gift-aid-calculation').show();
@@ -69,12 +69,12 @@ C6.Donate = {
     selectOtherAmtOnOtherInput: function() {
         $('input[name="transaction.donationAmt.other"]').on("input", function(){
             $('input[name="transaction.donationAmt"][value="Other"]').prop("checked", true).change();
-        });         
+        });
     },
     submitOnAmountSelect: function() {
         $('input[name="transaction.donationAmt"]').on("change", function(){
             if(this.value !== 'Other') {
-                $('.en__submit button').click(); 
+                $('.en__submit button').click();
             }
         });
     },
@@ -86,8 +86,8 @@ C6.Donate = {
             } else {
                 $('.donate-button-paypal').hide();
                 $('.donate-button-card').show();
-            }       
-            
+            }
+
             $('input[name="transaction.paymenttype"]').on("change", function(){
                 if(this.value == 'paypal') {
                     $('.donate-button-paypal').show();
@@ -96,7 +96,7 @@ C6.Donate = {
                     $('.donate-button-paypal').hide();
                     $('.donate-button-card').show();
                 }
-            });  
+            });
         }
     },
     cleanDataOnSubmit: function() {
@@ -113,6 +113,56 @@ C6.Donate = {
                 sessionStorage.setItem('donationAmt', $('input[name="transaction.donationAmt.other"]').val());
             } else {
                 sessionStorage.setItem('donationAmt', donationAmount);
+            }
+        }
+    },
+    paymentTypeToggle: function () {
+        if ($('.donate-type').length) {
+            // Queries
+            var primaryAmtQuery = '.donate-amounts input[type="radio"][value!="Other"]';
+            var altAmtQuery = '.alt-donate-amounts input[type="radio"]';
+
+            // Clones
+            var primaryAmtClone = $(primaryAmtQuery).clone();
+            var primaryLabelClone = $(primaryAmtQuery).next('label').clone();
+
+            var altAmtClone = $(altAmtQuery).clone();
+            var altLabelClone = $(altAmtQuery).next('label').clone();
+
+            // Elements
+            var primaryAmtElement = $(primaryAmtQuery);
+            var altAmtElement = $(altAmtQuery);
+
+            setTimeout(function(){
+                if($('.donate-type input[type="radio"]:checked').val() == 'PRIMARY') {
+                    switchToPrimary();
+                } else {
+                    switchToAlt();
+                }
+            }, 500);
+
+            $('.donate-type input[type="radio"]').on("change", function(){
+                if(this.value == 'ALTERNATIVE') {
+                    switchToAlt();
+                } else {
+                    switchToPrimary();
+                }
+            });
+        }
+
+        function switchToAlt() {
+            switchAmts(primaryAmtElement,altAmtClone,altLabelClone);
+        }
+
+        function switchToPrimary() {
+            switchAmts(primaryAmtElement,primaryAmtClone,primaryLabelClone);
+        }
+
+        function switchAmts(element,values,labels) {
+            for (let i = 0; i < element.length; i++) {
+                var newAmt = $(values[i]).val();
+                var newLabel = $(labels[i]).text();
+                $(element[i]).val(newAmt).next('label').text(newLabel);
             }
         }
     },

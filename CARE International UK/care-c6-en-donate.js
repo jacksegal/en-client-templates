@@ -4,42 +4,42 @@ if (typeof C6 == 'undefined') {
 
 C6.Donate = {
 	init: function() {},
-	fieldValidation: function() {
-    	if($('#en__field_transaction_ccnumber').length ){
-            var cleave = new Cleave('#en__field_transaction_ccnumber', {
-                creditCard: true,
-                onCreditCardTypeChanged: function (type) {
-                    console.log("%cCard type:\t "+type, "color: #241C15; background-color: #FF3EBF; padding: 4px; font-weight: 400;");
-                }
-            });	    	    
-    	}
-    	
-    	if($('#en__field_transaction_othamt1').length ){
-            var cleave = new Cleave('#en__field_transaction_othamt1', {
-                delimiter: '-',
-                blocks: [2, 2, 2],
-                numericOnly: true
-            });	    
-    	}
-    	
-    	// Account Number 
-    	if($('#en__field_transaction_othamt2').length ){
-            var cleave = new Cleave('#en__field_transaction_othamt2', {
-                delimiter: '',
-                blocks: [8],
-                numericOnly: true
-            });     
-        }
-    	
-        // CVV - Max Length	
-    	if($('#en__field_transaction_ccvv').length) {
-    	    $('#en__field_transaction_ccvv').attr('maxlength', 4);
-    	    var cleave = new Cleave('#en__field_transaction_ccvv', {
-                numeral: true,
-                numeralDecimalMark: '',
-                delimiter: '',
-            });	
-    	}
+	fieldValidation: function(ccNo='#en__field_transaction_ccnumber',sortCode='#en__field_transaction_othamt1',accountNo='#en__field_transaction_othamt2',cvv='#en__field_transaction_ccvv') {
+		if($(ccNo).length ){
+			var cleave = new Cleave(ccNo, {
+				creditCard: true,
+				onCreditCardTypeChanged: function (type) {
+					console.log("%cCard type:\t "+type, "color: #241C15; background-color: #FF3EBF; padding: 4px; font-weight: 400;");
+				}
+			});
+		}
+
+		if($(sortCode).length ){
+			var cleave = new Cleave(sortCode, {
+				delimiter: '-',
+				blocks: [2, 2, 2],
+				numericOnly: true
+			});
+		}
+
+		// Account Number
+		if($(accountNo).length ){
+			var cleave = new Cleave(accountNo, {
+				delimiter: '',
+				blocks: [8],
+				numericOnly: true
+			});
+		}
+
+		// CVV - Max Length
+		if($(cvv).length) {
+			$(cvv).attr('maxlength', 4);
+			var cleave = new Cleave(cvv, {
+				numeral: true,
+				numeralDecimalMark: '',
+				delimiter: '',
+			});
+		}
 	},
     displayDonationAmt: function() {
         if ($('.display-donation-amt').length) {
