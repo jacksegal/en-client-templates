@@ -1,0 +1,134 @@
+
+<!-- {{ START OF EN FOOTER }} -->
+</div>
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<section class="footer">
+	<div class="container-md">
+
+		<!-- LINKS -->
+		<div class="row mb-2">
+			<div class="px-0 col text-center">
+				<a href="https://www.league.org.uk/our-policies">Our Policies</a>
+				| <a href="https://www.league.org.uk/contact">Contact Us</a>
+			</div>
+		</div>
+
+		<!-- CONTACT -->
+		<div class="row mb-2">
+			<div class="px-0 col text-center">
+				<p>Tel: 01483 524 250 | Email: info@league.org.uk</p>
+			</div>
+		</div>
+
+		<!-- IMAGES -->
+		<div class="row mb-2">
+			<div class="px-0 col text-center">
+				<img width="63" height="95" src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/122/fundraiser-regulator.png?v=1611667664000" alt="" title="" class="mediaImage">
+				<img style="margin-left: 20px;" width="auto" height="95" src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/122/third-sector-best-charity.jpeg?v=1611667663000" alt="" title="" class="mediaImage">
+			</div>
+		</div>
+
+		<!-- INFO -->
+		<div class="row mb-2">
+			<div class="px-0 col text-center">
+				<p>
+					© 2020 The League Against Cruel Sports. Registered charity in England and Wales (1095234) and Scotland (SC045533).</p>
+				<p>
+					Registered in England and Wales as a company, no. 04037610. Registered office: New Sparling House, Holloway Hill, Godalming, GU7 1QZ, United Kingdom.
+				</p>
+
+				<p>
+					League Against Cruel Sports (UK) Limited. Registered in England and Wales as a company, no. 02880406. Registered office: New Sparling House, Holloway Hill, Godalming, GU7 1QZ, United Kingdom.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--<img src ="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/ribbonright.png?v=1610381773000">-->
+</section>
+
+<!-- Framework JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+
+<!-- C6 -->
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/122/league-c6-en-util.js?v=1613137564"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/122/league-c6-en-mp.js?v=1613137564"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/122/league-c6-en-cookie.js?v=1613137564"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/122/league-c6-en-share.js?v=1613137564"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/122/league-c6-en-spa.js?v=1613137564"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/122/league-c6-en-donate.js?v=1616696110"></script>
+
+<!-- Client Utils -->
+<!--<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/122/league-c6-en-gtm-events.js?v=1613135841"></script>-->
+
+<!-- App -->
+<script>
+    $(function() {
+        C6.En.labelsToPlaceholders();
+        C6.En.trimEmail();
+        C6.En.readMoreToggle();
+        C6.En.removeFormValidationOnInput();
+        C6.En.addLogicalCssClasses();
+        C6.En.createErrorContainer();
+        C6.En.updateNextPageUrl();
+        C6.En.getDataFromStorage([
+            {key: 'sortCode', target: '.storage-sort-code'},
+            {key: 'accountNumber', target: '.storage-account-number'},
+            {key: 'accountHolder', target: '.storage-account-holder'},
+            {key: 'paymentDate', target: '.storage-donation-date'},
+        ]);
+        C6.En.updateCurrentYear();
+        C6.Share.shareWindowInit();
+        C6.Spa.init();
+
+
+        /* Opt in Persuasion */
+        C6.En.optInPersuasion('input[name="supporter.questions.138227"]', 'N', '.email-opt-in-persuasion');
+
+        /* Email to Target */
+        // C6.Mp.init();
+
+        /* Donate */
+        C6.Donate.fieldValidation('#en__field_transaction_ccnumber','#en__field_supporter_bankRoutingNumber','#en__field_supporter_bankAccountNumber','#en__field_transaction_ccvv', '#en__field_transaction_ccexpire');
+        C6.Donate.giftAidCalculation();
+        C6.Donate.selectOtherAmtOnOtherInput();
+        C6.Donate.paypalButton();
+        C6.Donate.displayDonationAmt();
+        C6.Donate.paymentTypeToggle();
+        C6.En.addMaxLength([
+            // {key: '#en__field_supporter_creditCardHolderName', maxlength: '40'},
+            {key: '#en__field_supporter_creditCardHolderName', maxlength: '40'},
+        ]);
+
+    });
+</script>
+
+
+<!-- Submit Listener -->
+<script>
+    window.enOnSubmit = function(){
+
+        // fireTrackingOnSubmit();
+        C6.Donate.cleanDataOnSubmit();
+        C6.En.saveDataToStorage([
+            {"storageKey": "accountNumber", "storageValue": 'input[name="supporter.bankAccountNumber"]'},
+            {"storageKey": "sortCode", "storageValue": 'input[name="supporter.bankRoutingNumber"]'},
+            {"storageKey": "accountHolder", "storageValue": 'input[name="supporter.creditCardHolderName"]'},
+            {"storageKey": "paymentDate", "storageValue": '#en__field_transaction_recurrday option:selected'},
+        ]);
+        C6.Donate.saveDonationAmtToStorage();
+
+        return true;
+    }
+</script>
+
+
+</body>
+</html>

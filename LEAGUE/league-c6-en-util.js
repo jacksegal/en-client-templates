@@ -56,14 +56,14 @@ C6.En = {
             if(e.target.value === optInValue) {
                 $(persuasion).show();
 
-                console.group("%Opt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
+                console.group("%cOpt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
                 console.log("Value:\t", e.target.value);
                 console.log("Show:\t", persuasion);
                 console.groupEnd();
             } else {
                 $(persuasion).hide();
 
-                console.group("%Opt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
+                console.group("%cOpt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
                 console.log("Value:\t", e.target.value);
                 console.log("Hide:\t", persuasion);
                 console.groupEnd();
@@ -99,4 +99,14 @@ C6.En = {
             }
         });
     },
+    addMaxLength: function(fields) {
+        fields.forEach(function(field) {
+            if($(field.key).length) {
+                $(field.key).attr('maxlength', field.maxlength);
+            }
+        });
+    },
+    updateCurrentYear: function() {
+        $('.current-year').text(new Date().getFullYear());
+    }
 }; 

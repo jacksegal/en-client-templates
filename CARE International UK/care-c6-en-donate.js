@@ -1,10 +1,10 @@
 if (typeof C6 == 'undefined') {
-    C6 = {};
+	C6 = {};
 }
 
 C6.Donate = {
 	init: function() {},
-	fieldValidation: function(ccNo='#en__field_transaction_ccnumber',sortCode='#en__field_transaction_othamt1',accountNo='#en__field_transaction_othamt2',cvv='#en__field_transaction_ccvv') {
+	fieldValidation: function(ccNo='#en__field_transaction_ccnumber',sortCode='#en__field_transaction_othamt1',accountNo='#en__field_transaction_othamt2',cvv='#en__field_transaction_ccvv',expiryDate='#en__field_transaction_ccexpire') {
 		if($(ccNo).length ){
 			var cleave = new Cleave(ccNo, {
 				creditCard: true,
@@ -12,6 +12,16 @@ C6.Donate = {
 					console.log("%cCard type:\t "+type, "color: #241C15; background-color: #FF3EBF; padding: 4px; font-weight: 400;");
 				}
 			});
+		}
+
+		if($(expiryDate).length ){
+			new Cleave(expiryDate, {
+				date: true,
+				delimiter: '/',
+				datePattern: ['m', 'Y']
+			});
+
+			$(expiryDate).attr('placeholder', 'MM/YYYY');
 		}
 
 		if($(sortCode).length ){
@@ -41,80 +51,80 @@ C6.Donate = {
 			});
 		}
 	},
-    displayDonationAmt: function() {
-        if ($('.display-donation-amt').length) {
-            var donationAmt = sessionStorage.getItem('donationAmt');
-            if(donationAmt) {
-                $('.display-donation-amt .donation-amt').text(donationAmt);
-                $('.display-donation-amt').show();
-            }
-        }
-    },
+	displayDonationAmt: function() {
+		if ($('.display-donation-amt').length) {
+			var donationAmt = sessionStorage.getItem('donationAmt');
+			if(donationAmt) {
+				$('.display-donation-amt .donation-amt').text(donationAmt);
+				$('.display-donation-amt').show();
+			}
+		}
+	},
 	giftAidCalculation: function() {
-        if ($('.gift-aid-calculation').length) {
-        	var donationAmt = sessionStorage.getItem('donationAmt');
-        	if(donationAmt) {
-        		giftAidAmt = (donationAmt/4)*5;
-        		
-        		if(giftAidAmt % 1 != 0) {
-        		    giftAidAmt = giftAidAmt.toFixed(2)
-        		}
-        		
-        		$('.gift-aid-calculation .donation-amt').text(donationAmt);
-        		$('.gift-aid-calculation .gift-aid-amt').text(giftAidAmt);
-        		$('.gift-aid-calculation').show();
-        	}
-        }
+		if ($('.gift-aid-calculation').length) {
+			var donationAmt = sessionStorage.getItem('donationAmt');
+			if(donationAmt) {
+				giftAidAmt = (donationAmt/4)*5;
+
+				if(giftAidAmt % 1 != 0) {
+					giftAidAmt = giftAidAmt.toFixed(2)
+				}
+
+				$('.gift-aid-calculation .donation-amt').text(donationAmt);
+				$('.gift-aid-calculation .gift-aid-amt').text(giftAidAmt);
+				$('.gift-aid-calculation').show();
+			}
+		}
 	},
 	selectOtherAmtOnOtherInput: function() {
-        $('input[name="transaction.donationAmt.other"]').on("input", function(){
-        	$('input[name="transaction.donationAmt"][value="Other"]').prop("checked", true).change();
-        });			
+		$('input[name="transaction.donationAmt.other"]').on("input", function(){
+			$('input[name="transaction.donationAmt"][value="Other"]').prop("checked", true).change();
+		});
 	},
 	submitOnAmountSelect: function() {
-	    $('input[name="transaction.donationAmt"]').on("change", function(){
-	        if(this.value !== 'Other') {
-	            $('.en__submit button').click(); 
-	        }
-        });
+		$('input[name="transaction.donationAmt"]').on("change", function(){
+			if(this.value !== 'Other') {
+				$('.en__submit button').click();
+			}
+		});
 	},
 	paypalButton: function() {
-        if ($('.donate-button-paypal').length) {
-	        if($('input[name="transaction.paymenttype"]').val() == 'paypal') {
-	            $('.donate-button-paypal').show();
-	            $('.donate-button-card').hide();
-	        } else {
-	            $('.donate-button-paypal').hide();
-	            $('.donate-button-card').show();
-	        }		
-	        
-		    $('input[name="transaction.paymenttype"]').on("change", function(){
-		        if(this.value == 'paypal') {
-		            $('.donate-button-paypal').show();
-		            $('.donate-button-card').hide();
-		        } else {
-		            $('.donate-button-paypal').hide();
-		            $('.donate-button-card').show();
-		        }
-	        });	 
-        }
+		if ($('.donate-button-paypal').length) {
+			if($('input[name="transaction.paymenttype"]').val() == 'paypal') {
+				$('.donate-button-paypal').show();
+				$('.donate-button-card').hide();
+			} else {
+				$('.donate-button-paypal').hide();
+				$('.donate-button-card').show();
+			}
+
+			$('input[name="transaction.paymenttype"]').on("change", function(){
+				if(this.value == 'paypal') {
+					$('.donate-button-paypal').show();
+					$('.donate-button-card').hide();
+				} else {
+					$('.donate-button-paypal').hide();
+					$('.donate-button-card').show();
+				}
+			});
+		}
 	},
 	cleanDataOnSubmit: function() {
 		if($('#en__field_transaction_ccnumber').length ){
-	        $('#en__field_transaction_ccnumber').val(function(index, value){
-	            return value.replace(/\s+/g, '');
-	        });
+			$('#en__field_transaction_ccnumber').val(function(index, value){
+				return value.replace(/\s+/g, '');
+			});
 		}
 	},
 	saveDonationAmtToStorage: function() {
-    	if($('input[name="transaction.donationAmt"]').length) {
-    	    var donationAmount = $('input[name="transaction.donationAmt"]:checked').val();
-    	    if(donationAmount == 'Other') {
-    	        sessionStorage.setItem('donationAmt', $('input[name="transaction.donationAmt.other"]').val());
-    	    } else {
-    	        sessionStorage.setItem('donationAmt', donationAmount);
-    	    }
-    	}
+		if($('input[name="transaction.donationAmt"]').length) {
+			var donationAmount = $('input[name="transaction.donationAmt"]:checked').val();
+			if(donationAmount == 'Other') {
+				sessionStorage.setItem('donationAmt', $('input[name="transaction.donationAmt.other"]').val());
+			} else {
+				sessionStorage.setItem('donationAmt', donationAmount);
+			}
+		}
 	},
 	paymentTypeToggle: function () {
 		if ($('.donate-type').length) {

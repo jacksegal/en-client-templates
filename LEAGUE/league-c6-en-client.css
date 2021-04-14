@@ -173,29 +173,26 @@ ul {}
 
 /* Donation Amount */
 .donate-amounts .en__field__label--item {
-    background-color: #EB5D40;
-    border: solid 2px #EB5D40;
+    background-color: white;
+    border: solid 1px #6b6b6b;
     line-height: 2.5;
     width: 100% !important;
 
     text-align: center;
-    color: white;
+    color: #6b6b6b;
     font-size: 24px;
 }
 
 /* Donation Amount */
 .donate-amounts .en__field--donationAmt .en__field__label--item:hover {
     cursor: pointer;
-    background-color: white;
-    border: #EB5D40 2px solid;
-    color: #EB5D40;
 }
 
 /* Donation Amount */
-.donate-amounts input[type="radio"]:checked+label{  
-    background-color: white; 
-    color: #EB5D40;
-    border: solid 2px #EB5D40;
+.donate-amounts input[type="radio"]:checked+label{
+    background-color: #EB5D40;
+    color: white;
+    border: solid 1px #EB5D40;
 }
 
 /* Donation Frequency Toggle */
@@ -212,8 +209,8 @@ ul {}
 /* Donation Frequency Toggle */
 .donate-type input[type="radio"]:checked+label{  
     font-family: 'Fira Sans Condensed', sans-serif;
-    background-color: #E36F1E;
-    border: #E36F1E 1px solid;
+    background-color: #EB5D40;
+    border: #EB5D40 1px solid;
     color: white;
     position: relative;
 }
@@ -227,7 +224,7 @@ ul {}
     content: ' ';
     width: 0;
     height: 0;
-    border-top: solid 15px #E36F1E;
+    border-top: solid 15px #EB5D40;
     border-left: solid 15px transparent;
     border-right: solid 15px transparent;
     transform: translateX(-50%);

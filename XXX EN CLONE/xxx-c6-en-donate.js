@@ -4,7 +4,7 @@ if (typeof C6 == 'undefined') {
 
 C6.Donate = {
     init: function() {},
-    fieldValidation: function(ccNo='#en__field_transaction_ccnumber',sortCode='#en__field_transaction_othamt1',accountNo='#en__field_transaction_othamt2',cvv='#en__field_transaction_ccvv') {
+    fieldValidation: function(ccNo='#en__field_transaction_ccnumber',sortCode='#en__field_transaction_othamt1',accountNo='#en__field_transaction_othamt2',cvv='#en__field_transaction_ccvv',expiryDate='#en__field_transaction_ccexpire') {
         if($(ccNo).length ){
             var cleave = new Cleave(ccNo, {
                 creditCard: true,
@@ -12,6 +12,16 @@ C6.Donate = {
                     console.log("%cCard type:\t "+type, "color: #241C15; background-color: #FF3EBF; padding: 4px; font-weight: 400;");
                 }
             });
+        }
+
+        if($(expiryDate).length ){
+            new Cleave(expiryDate, {
+                date: true,
+                delimiter: '/',
+                datePattern: ['m', 'Y']
+            });
+
+            $(expiryDate).attr('placeholder', 'MM/YYYY');
         }
 
         if($(sortCode).length ){

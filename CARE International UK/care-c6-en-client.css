@@ -179,11 +179,11 @@ ul {
 }
 
 /* Donation Amount */
-.donate-amounts input[type="radio"]:checked+label{  
-    background-color: #E36F1E; 
+.donate-amounts input[type="radio"]:checked+label{
+    background-color: #E36F1E;
     color: white;
     border: solid 1px #E36F1E;
-} 
+}
 
 /* Donation Frequency Toggle */
 .donate-type .en__field__label--item {

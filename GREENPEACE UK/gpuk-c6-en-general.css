@@ -6,7 +6,7 @@
 /* Donation Amount Buttons */
 .donate-amounts .en__field__element--radio {
     display: flex;
-    flex-wrap: wrap;      
+    flex-wrap: wrap;
 }
 
 /* Donation Amount Buttons */
@@ -79,22 +79,22 @@
 /* Donation Provider - Card / PayPal */
 @media (max-width: 480px) {
     .donate-provider input[value='Credit/debit card'] + label:after, .donate-provider input[value='card'] + label:after {
-        width: 90px;
+        width: 90px !important;
     }
 
     .donate-provider input[value='paypal'] + label:after {
-        width: 90px;
+        width: 90px !important;
     }
 }
 
 /* Donation Provider - Card / PayPal */
 @media (max-width: 375px) {
     .donate-provider input[value='Credit/debit card'] + label:after, .donate-provider input[value='card'] + label:after {
-        width: 80px;
+        width: 80px !important;
     }
 
     .donate-provider input[value='paypal'] + label:after {
-        width: 80px;
+        width: 80px !important;
     }
 }
 
@@ -342,7 +342,7 @@
 .en__component--formblock.split-fields > .en__field {
     -ms-flex-preferred-size: 48%;
     flex-basis: 48%;
-} 
+}
 
 /* Utilities */
 .label-inline .en__field__label--item {
