@@ -152,7 +152,7 @@ C6.Donate = {
 			}, 500);
 
 			$('.donate-type input[type="radio"]').on("change", function(){
-				if(this.value == 'ALTERNATIVE') {
+				if(this.value.includes('ALTERNATIVE')) {
 					switchToAlt();
 				} else {
 					switchToPrimary();

@@ -54,3 +54,8 @@
     background-repeat: no-repeat;
     background-position: bottom -70px right 0;
 }
+
+.donate-amounts.text-center .en__field__item {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
