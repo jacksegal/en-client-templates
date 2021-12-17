@@ -101,7 +101,7 @@
 /* Donation Provider - Card / PayPal */
 .donate-provider input[value='Credit/debit card'] + label:after, .donate-provider input[value='card'] + label:after {
     display: block;
-    background-image: url(https://storage.c6-digital.net/en/card-logos.png?1620638116);
+    background-image: url(https://storage.c6-digital.net/en/card-logos.png);
     content: "";
     width: 140px;
     height: 30px;

@@ -54,14 +54,14 @@ C6.En = {
     optInPersuasion: function(optInField, optInValue, persuasion) {
         $(optInField).change(function(e) {
             if(e.target.value === optInValue) {
-                $(persuasion).removeClass('c6-hidden');
+                $(persuasion).show();
 
                 console.group("%cOpt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
                 console.log("Value:\t", e.target.value);
                 console.log("Show:\t", persuasion);
                 console.groupEnd();
             } else {
-                $(persuasion).addClass('c6-hidden');
+                $(persuasion).hide();
 
                 console.group("%cOpt-in", "color: #241C15; background-color: #FFFF00; padding: 4px; font-weight: 400;");
                 console.log("Value:\t", e.target.value);

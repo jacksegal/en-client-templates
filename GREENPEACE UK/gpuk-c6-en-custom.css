@@ -17,3 +17,11 @@
     /*color: #a3a3a3;*/
     padding: 20px;
 }
+
+.bg-black {
+    background-color: black;
+}
+
+.text-lg p {
+    font-size: 22px !important;
+}

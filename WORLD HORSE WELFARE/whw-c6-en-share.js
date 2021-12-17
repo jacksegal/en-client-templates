@@ -38,7 +38,7 @@ C6.Share = {
         link +=  this.media['email'].bodyUrl + encodeURIComponent(body);
         return link;
     },
-        updateLinksFromSelector: function(media) {
+    updateLinksFromSelector: function(media) {
         for (index = 0; index < media.length; ++index) {
             /* Which Social Media */
             var medium = media[index];

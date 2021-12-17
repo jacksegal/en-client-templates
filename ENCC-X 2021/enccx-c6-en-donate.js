@@ -76,22 +76,6 @@ C6.Donate = {
             }
         }
     },
-    calculateGiftAidAmt: function(donationAmt) {
-        var giftAidAmt = (donationAmt/100)*25;
-
-        if(giftAidAmt % 1 != 0) {
-            giftAidAmt = giftAidAmt.toFixed(2)
-        }
-
-        return giftAidAmt;
-    },
-    calculateDecimal: function(amt) {
-        if(amt % 1 != 0) {
-            amt = amt.toFixed(2)
-        }
-
-        return amt;
-    },
     selectOtherAmtOnOtherInput: function() {
         $('input[name="transaction.donationAmt.other"]').on("input", function(){
             $('input[name="transaction.donationAmt"][value="Other"]').prop("checked", true).change();

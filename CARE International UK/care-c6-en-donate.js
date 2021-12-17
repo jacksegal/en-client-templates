@@ -46,6 +46,7 @@ C6.Donate = {
 			$(cvv).attr('maxlength', 4);
 			var cleave = new Cleave(cvv, {
 				numeral: true,
+				stripLeadingZeroes: false,
 				numeralDecimalMark: '',
 				delimiter: '',
 			});

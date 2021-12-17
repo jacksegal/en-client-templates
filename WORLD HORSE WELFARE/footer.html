@@ -1,0 +1,108 @@
+
+<!-- {{ START OF EN FOOTER }} -->
+</div>
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<section class="footer p-4 bg-white-transparent">
+	<div class="container-md">
+		<div class="row">
+			<div class="px-0 col text-center">
+				<p>
+					<a href="https://www.careinternational.org.uk/privacy-policy">Privacy Policy</a>
+					| <a href="https://www.careinternational.org.uk/website-terms-use">Website T&C</a>
+				</p>
+				<p>
+					© <span class="current-year"></span> CARE International UK, 9th Floor, 89 Albert Embankment, London, SE1 7TP, United Kingdom
+					All rights reserved. CARE International UK is a registered charity in England and Wales (292506)
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Framework JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+
+
+<!-- C6 -->
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/whw-c6-en-util.js?v=1613387648"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/whw-c6-en-mp.js?v=1613137348"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/whw-c6-en-cookie.js?v=1613137348"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/whw-c6-en-share.js?v=1613137348"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/whw-c6-en-spa.js?v=1613137348"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/whw-c6-en-donate.js?v=1613387648"></script>
+
+<!-- Client Utils -->
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/whw-c6-en-gtm-events.js?v=1613137348"></script>
+<script src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2229/whw-c6-en-custom.js?v=1616695342000"></script>
+
+<!-- App -->
+<script>
+    $(function() {
+        /* General */
+        C6.En.labelsToPlaceholders();
+        C6.En.trimEmail();
+        C6.En.readMoreToggle();
+        C6.En.removeFormValidationOnInput();
+        C6.En.addLogicalCssClasses();
+        C6.En.createErrorContainer();
+        C6.En.updateNextPageUrl();
+        // C6.En.getDataFromStorage([
+        //     {key: 'sortCode', target: '.storage-sort-code'},
+        //     {key: 'accountNumber', target: '.storage-account-number'},
+        //     {key: 'accountHolder', target: '.storage-account-holder'},
+        //     {key: 'paymentDate', target: '.storage-donation-date'},
+        // ]);
+        C6.En.updateCurrentYear();
+        C6.Share.shareWindowInit();
+        C6.Spa.init();
+
+        /* Opt in Persuasion */
+        // C6.En.optInPersuasion('input[name="supporter.questions.859056"]', 'NO', '.email-opt-in-persuasion');
+        // C6.En.optInPersuasion('input[name="supporter.questions.859057"]', 'NO', '.sms-opt-in-persuasion');
+
+        /* Email to Target */
+        C6.Mp.init();
+
+        // /* Donate */
+        // C6.Donate.fieldValidation();
+        // C6.Donate.giftAidCalculation();
+        // C6.Donate.selectOtherAmtOnOtherInput();
+        // C6.Donate.paypalButton();
+        // C6.Donate.displayDonationAmt();
+        // C6.Donate.paymentTypeToggle();
+        // C6.En.addMaxLength([
+        //     {key: '#en__field_supporter_NOT_TAGGED_5', maxlength: '40'},
+        //     {key: 'en__field_supporter_creditCardHolderName', maxlength: '40'},
+        // ]);
+    });
+</script>
+
+<!-- Submit Listener -->
+<script>
+    window.enOnSubmit = function(){
+
+        // fireTrackingOnSubmit();
+        // C6.Donate.cleanDataOnSubmit();
+        // C6.En.saveDataToStorage([
+        //     {"storageKey": "accountNumber", "storageValue": 'input[name="transaction.othamt2"]'},
+        //     {"storageKey": "sortCode", "storageValue": 'input[name="transaction.othamt1"]'},
+        //     {"storageKey": "accountHolder", "storageValue": 'input[name="supporter.NOT_TAGGED_5"]'},
+        //     {"storageKey": "paymentDate", "storageValue": '#en__field_supporter_NOT_TAGGED_8 option:selected'},
+        // ]);
+        // C6.Donate.saveDonationAmtToStorage();
+
+        // return true;
+    }
+</script>
+
+
+</body>
+</html>
